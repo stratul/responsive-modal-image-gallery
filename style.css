@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    position: relative;
+}
+.container {
+    max-width: 120rem;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 8rem;
+    background-color: #6F8695;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    color: #CEC288;
+    text-decoration: none;
+}
+header .logo:hover {
+    color: #FFE381;
+}
+header .registration a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #CEC288;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+header .registration a:hover {
+    color: #FFE381;
+    transform: scale(1.1);
+}
+header .registration span {
+    display: inline-block;    
+    color: #CEC288;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+
+
+
+.sign-form, .full-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(0,0,0,0.7);
+}
+.sign-form .close, .full-image .close {
+    position: absolute;
+    top: 6rem;
+    right: 10rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 30;
+}
+.sign-form .close:hover,
+.full-image .close:hover {
+    transform: scale(1.2);
+}
+.sign-form .close i,
+.full-image .close i {
+    font-size: 4rem;
+    color: #fff;
+}
+.sign-form form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.sign-form form input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 0.2rem solid #fff;
+}
+.sign-form form input::placeholder {
+    color: #fff;
+}
+.sign-form form button {
+    border: 0.2rem solid #fff;
+    outline: none;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.sign-form form button:hover {
+    transform: scale(1.1);
+}
+#sign-in-form {
+    display: none;
+}
+#sign-up-form {
+    display: none;
+}
+
+
+
+
+.gallery {
+    width: 100%;
+    padding: 8rem 0;
+}
+.gallery h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+.gallery .gallery-imgs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery .gallery-imgs .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 0.4rem;
+}
+.gallery .gallery-imgs .column img {
+    width: 100%;
+    margin-top: 0.8rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.gallery .gallery-imgs .column img:hover {
+    transform: scale(1.05);    
+    opacity: 0.5;
+}
+
+
+
+
+#full-images {
+    display: none;
+}
+.full-image .full-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 80%;
+    height: 90vh;
+}
+.full-image .full-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .gallery .gallery-imgs .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .gallery .gallery-imgs .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
